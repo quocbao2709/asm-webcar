@@ -1,31 +1,145 @@
-/* Định dạng bảng */
-table {
+/* Reset CSS (Optional, to reset default browser styles) */
+body, h1, h2, p, ul, li, form {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+.wrap {
     width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
+    background-color: #333;
+    color: #fff;
 }
 
-/* Định dạng dòng tiêu đề */
-th {
-    background-color: #f2f2f2;
-    text-align: left;
-    padding: 8px;
+.header {
+    padding: 10px 0;
 }
 
-/* Định dạng dòng dữ liệu */
-td {
-    border-bottom: 1px solid #ddd;
-    padding: 8px;
+.logo {
+    float: left;
+    margin: 10px;
 }
 
-/* Định dạng các liên kết "View Details", "Edit", và "Delete" */
-td a {
-    text-decoration: none;
-    color: #007bff;
+.logo img {
+    width: 150px;
+    height: auto;
+}
+
+.header_top_right {
+    float: right;
+}
+
+.search_box {
     margin-right: 10px;
 }
 
-/* Định dạng nút Delete với thông báo xác nhận */
-td a.delete-link {
-    color: red;
+.search_box input[type="text"] {
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+.search_box input[type="submit"] {
+    background-color: #f60;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+}
+
+.shopping_cart {
+    margin-right: 10px;
+}
+
+.cart_title {
+    font-weight: bold;
+}
+
+.no_product {
+    color: #f60;
+    font-weight: bold;
+}
+
+.login {
+    margin-right: 10px;
+}
+
+/* Menu Styles */
+.menu {
+    background-color: #333;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Body Styles */
+h1 {
+    font-size: 24px;
+    margin: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 24px;
 }

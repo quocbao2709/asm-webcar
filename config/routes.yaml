@@ -1,3 +1,7 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+cars:
+    path: /cars
+    controller: App\Controller\YourController::cars
+
