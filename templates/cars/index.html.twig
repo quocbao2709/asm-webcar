@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>car List</h1>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </tr>
+        {% for car in cars %}
+            <tr>
+                <td>{{ car.id }}</td>
+                <td>{{ car.namecar }}</td>
+                <td>{{ car.price }}</td>
+                <td>
+                <a href="{{ path('view_car', {'id': car.id}) }}">View Details</a>
+                <a href="{{ path('edit_car', {'id': car.id}) }}">Edit</a>
+                <a href="{{ path('delete_car', {'id': car.id}) }}" onclick="return confirm('Are you sure you want to delete this car?')">Delete</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
