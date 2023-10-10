@@ -1,0 +1,31 @@
+/* Định dạng bảng */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+/* Định dạng dòng tiêu đề */
+th {
+    background-color: #f2f2f2;
+    text-align: left;
+    padding: 8px;
+}
+
+/* Định dạng dòng dữ liệu */
+td {
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* Định dạng các liên kết "View Details", "Edit", và "Delete" */
+td a {
+    text-decoration: none;
+    color: #007bff;
+    margin-right: 10px;
+}
+
+/* Định dạng nút Delete với thông báo xác nhận */
+td a.delete-link {
+    color: red;
+}
