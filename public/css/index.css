@@ -1,145 +1,126 @@
-/* Reset CSS (Optional, to reset default browser styles) */
-body, h1, h2, p, ul, li, form {
-    margin: 0;
-    padding: 0;
+/* Đảm bảo rằng footer và wrapper là các phần tử block */
+.footer, .wrapper {
+    display: block;
 }
 
-body {
-    font-family: Arial, sans-serif;
+/* Chia cột ngang cho các phần tử .section_group */
+.section_group {
+    display: flex; /* Sử dụng flexbox để chia cột ngang */
 }
 
-/* Header Styles */
-.wrap {
-    width: 100%;
-    background-color: #333;
-    color: #fff;
+/* Cấu hình các phần tử .section_group con */
+.section_group > div {
+    flex: 1; /* Phần tử con mở rộng để lấp đầy không gian ngang */
+    padding: 20px; /* Thêm khoảng cách giữa các phần tử */
+    text-align: left; /* Hiển thị nội dung bên trái */
 }
 
-.header {
-    padding: 10px 0;
-}
-
-.logo {
-    float: left;
-    margin: 10px;
-}
-
-.logo img {
-    width: 150px;
-    height: auto;
-}
-
-.header_top_right {
-    float: right;
-}
-
-.search_box {
-    margin-right: 10px;
-}
-
-.search_box input[type="text"] {
-    width: 200px;
-    padding: 5px;
-    border: 1px solid #ccc;
-}
-
-.search_box input[type="submit"] {
-    background-color: #f60;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-}
-
-.shopping_cart {
-    margin-right: 10px;
-}
-
-.cart_title {
-    font-weight: bold;
-}
-
-.no_product {
-    color: #f60;
-    font-weight: bold;
-}
-
-.login {
-    margin-right: 10px;
-}
-
-/* Menu Styles */
-.menu {
-    background-color: #333;
-}
-
-.menu ul {
+/* Chia các phần tử ul ngang */
+.section_group ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
+/* Cấu hình các mục trong ul */
+.section_group ul li {
+    margin: 10px 0; /* Thêm khoảng cách giữa các mục */
+}
+
+/* Cấu hình các biểu tượng mạng xã hội */
+.social-icons ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-icons ul li {
+    display: inline-block; /* Hiển thị các biểu tượng mạng xã hội ngang */
+    margin: 0 10px; /* Thêm khoảng cách giữa các biểu tượng */
+}
+
+/* Đảm bảo các biểu tượng mạng xã hội có kích thước cố định */
+.social-icons ul li a {
+    display: inline-block;
+    width: 30px; /* Đổi kích thước tùy theo nhu cầu */
+    height: 30px;
+    background-color: #333; /* Màu nền của biểu tượng */
+    color: #fff; /* Màu văn bản của biểu tượng */
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%; /* Làm cho biểu tượng có hình tròn */
+    text-decoration: none; /* Loại bỏ gạch chân mặc định */
+}
+
+/* Đảm bảo các biểu tượng mạng xã hội có màu nền khi di chuột qua */
+.social-icons ul li a:hover {
+    background-color: #555;
+}
+
+
+/* Cấu hình phần tử header */
+.header {
+    display: flex; /* Sử dụng flexbox để chia cột ngang */
+    justify-content: space-between; /* Các phần tử con nằm ở hai bên của header */
+    align-items: center; /* Canh giữa theo chiều dọc */
+    padding: 10px 0; /* Thêm khoảng cách phía trên và phía dưới */
+}
+
+/* Cấu hình phần tử logo */
+.logo {
+    flex: 1; /* Mở rộng để lấp đầy không gian ngang */
+}
+
+.logo a {
+    display: block; /* Biểu tượng logo nên nằm ngang toàn bộ vùng header */
+}
+
+/* Cấu hình phần tử header_top_right */
+.header_top_right {
+    display: flex; /* Sử dụng flexbox để sắp xếp các phần tử con ngang */
+    align-items: center; /* Canh giữa theo chiều dọc */
+}
+
+/* Cấu hình phần tử search_box */
+.search_box {
+    margin-right: 20px; /* Thêm khoảng cách phía bên phải */
+}
+
+/* Cấu hình phần tử shopping_cart */
+.shopping_cart {
+    margin-right: 20px; /* Thêm khoảng cách phía bên phải */
+}
+
+/* Cấu hình phần tử login */
+.login {
+    margin-right: 20px; /* Thêm khoảng cách phía bên phải */
+}
+
+/* Cấu hình menu */
+.menu {
+    display: flex; /* Sử dụng flexbox để chia cột ngang */
+    background-color: #333; /* Đổi màu nền của menu */
+    padding: 10px 0; /* Thêm khoảng cách phía trên và phía dưới của menu */
+}
+
+/* Cấu hình các mục menu */
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Sắp xếp các mục menu ngang */
+}
+
 .menu li {
-    display: inline;
-    margin-right: 10px;
+    margin-right: 20px; /* Thêm khoảng cách giữa các mục menu */
 }
 
 .menu a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
+    color: #fff; /* Đổi màu văn bản của các mục menu */
+    text-decoration: none; /* Loại bỏ gạch chân mặc định */
+    font-weight: bold; /* In đậm văn bản */
 }
 
-/* Body Styles */
-h1 {
-    font-size: 24px;
-    margin: 20px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-table th, table td {
-    border: 1px solid #ccc;
-    padding: 8px;
-    text-align: left;
-}
-
-/* Footer Styles */
-.footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-}
-
-.wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.footer-section {
-    flex: 1;
-    margin: 0 10px;
-    text-align: center;
-}
-
-.footer a {
-    color: #fff;
-    text-decoration: none;
-    display: block;
-    margin-top: 10px;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.social-icons a {
-    display: inline-block;
-    margin-right: 10px;
-    font-size: 24px;
+.menu a:hover {
+    text-decoration: underline; /* Gạch chân khi di chuột qua */
 }

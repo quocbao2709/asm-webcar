@@ -1,15 +1,16 @@
 {% extends 'base.html.twig' %}
+{% block title %}Hi{% endblock %}
 
 {% block body %}
 
 
-<!DOCTYPE php>
-<head>
-<title>Store Website</title>
+{# <!DOCTYPE php>
+<head> #}
+
 <meta http-equiv="Content-Type" content="text/php; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<link rel="stylesheet" href="{{ asset('css/index.css') }}">
-</head>
+
+{# </head> #}
   <div class="wrap">
 		<div class="header">
 			<div class="logo">
@@ -36,8 +37,8 @@
  </div>
 <div class="menu">
 	<ul id="dc_mega-menu-orange" class="dc_mm-orange">
-	  <li><a href="{{ path('cars') }}">Home</a></li>
-	  <li><a href="#">Products</a> </li>
+	  <li><a href="{{ path('add_car') }}">Home</a></li>
+	  <li><a href="{{ path('product_show') }}">Products</a> </li>
 	  <li><a href="#">Top Brands</a></li>
 	  <li><a href="#">Cart</a></li>
 	  <li><a href="#">Contact</a> </li>
@@ -69,8 +70,8 @@
         {% endfor %}
     </table>
 </body>
-<footer>
-   <div class="footer">
+{# <footer> #}
+   {# <div class="footer">
    	  <div class="wrapper">	
 	     <div class="section group">
 				<div class="col_1_of_4 span_1_of_4">
@@ -121,7 +122,6 @@
    	 					</div>
 				</div>
 			</div>
-     </div>
-<footer>
-</html>
+     </div> #}
+{# <footer> #}
 {% endblock %}

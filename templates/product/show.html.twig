@@ -1,0 +1,13 @@
+{# templates/product/show.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h1>Product Details</h1>
+    {% for car in product %}
+        
+        <h2>{{ car.namecar }}</h2>
+        <p>{{ car.id }}</p>
+        <p>Price: ${{ car.price }}</p>
+    {% endfor %}
+{% endblock %}
