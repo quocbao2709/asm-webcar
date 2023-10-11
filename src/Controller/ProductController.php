@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Car;
+use App\Repository\CarRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -22,6 +23,19 @@ class ProductController extends AbstractController
 
         return $this->render('product/show.html.twig', [
             'product' => $product,
+        ]);
+    }
+    // src/Controller/HomeController.php
+    public function addToOrder($id, CarRepository $carRepository): Response
+    {
+        $car = $carRepository->find($id);
+
+        if (!$car) {
+            throw $this->createNotFoundException('car not found');
+        }
+
+        return $this->render('product/order.html.twig', [
+            'car' => $car,
         ]);
     }
 }

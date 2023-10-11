@@ -4,4 +4,7 @@
 cars:
     path: /cars
     controller: App\Controller\YourController::cars
+add_to_order:
+    path: /add-to-order/{id}
+    controller: App\Controller\ProductController::addToOrder
 

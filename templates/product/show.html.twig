@@ -9,5 +9,6 @@
         <h2>{{ car.namecar }}</h2>
         <p>{{ car.id }}</p>
         <p>Price: ${{ car.price }}</p>
+        <a href="{{ path('add_to_order', {'id': car.id}) }}">Add Order</a>
     {% endfor %}
 {% endblock %}
