@@ -8,3 +8,6 @@ add_to_order:
     path: /add-to-order/{id}
     controller: App\Controller\ProductController::addToOrder
 
+home:
+    path: /home
+    controller: App\Controller\HomeController::index

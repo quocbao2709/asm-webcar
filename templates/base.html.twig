@@ -16,6 +16,45 @@
         {% endblock %}
     </head>
     <body>
+        <meta http-equiv="Content-Type" content="text/php; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        {# </head> #}
+        <div class="wrap">
+                <div class="header">
+                    <div class="logo">
+                        <a href="index.html.twig"><img src="{{ asset('images/logo.jpg') }}" alt="logo" style="width: 200px; height: 150px;" /></a>
+                    </div>
+                    <div class="header_top_right">
+                        <div class="search_box">
+                            <form>
+                                <input type="text" value="Search for Products" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search for Products';}"><input type="submit" value="SEARCH">
+                            </form>
+                        </div>
+                        <div class="shopping_cart">
+                            <div class="cart">
+                                <a href="#" title="View my shopping cart" rel="nofollow">
+                                        <span class="cart_title">Cart</span>
+                                        <span class="no_product">(empty)</span>
+                                    </a>
+                                </div>
+                        </div>
+                <div class="login"><a href="login.php">Login</a></div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="menu">
+            <ul id="dc_mega-menu-orange" class="dc_mm-orange">
+            <li><a href="{{ path('home') }}">Home</a></li>
+            <li><a href="{{ path('product_show') }}">Products</a> </li>
+            <li><a href="#">Top Brands</a></li>
+            <li><a href="#">Cart</a></li>
+            <li><a href="#">Contact</a> </li>
+            <div class="clear"></div>
+            </ul>
+        </div>
+
         {% block body %}{% endblock %}
     </body>
     <footer>

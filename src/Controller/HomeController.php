@@ -2,18 +2,24 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Entity\Car;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class HomeController extends AbstractController
 {
     /**
-     * @Route("/", name="app_homepage")
+     * @Route("/home", name="home")
      */
     public function index(): Response
     {
-        return $this->render('home/index.html.twig');
+        $entityManager = $this->getDoctrine()->getManager();
+        $cars = $entityManager->getRepository(Car::class)->findAll();
+
+        return $this->render('home/index.html.twig', [
+            'cars' => $cars,
+        ]);
     }
-    
+
 }
