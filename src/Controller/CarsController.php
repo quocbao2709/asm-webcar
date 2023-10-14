@@ -40,7 +40,7 @@ class CarsController extends AbstractController
             $entityManager->persist($newcar);
             $entityManager->flush();
 
-            return $this->redirectToRoute('car_list');
+            return $this->redirectToRoute('home');
         }
 
         return $this->render('cars/add.html.twig', [
