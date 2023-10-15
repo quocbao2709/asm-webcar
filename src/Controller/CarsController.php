@@ -37,6 +37,18 @@ class CarsController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager = $this->getDoctrine()->getManager();
+
+            $imageFile = $form['imageFile']->getData();
+            if ($imageFile) {
+                // Thực hiện lưu trữ tệp ảnh và cập nhật đối tượng Car
+                $newFileName = uniqid().'.'.$imageFile->guessExtension();
+                $imageFile->move(
+                    $this->getParameter('image_directory'), // Thư mục lưu trữ hình ảnh
+                    $newFileName
+                );
+                $newcar->setImage($newFileName);
+            }
+
             $entityManager->persist($newcar);
             $entityManager->flush();
 

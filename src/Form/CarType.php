@@ -6,6 +6,7 @@ use App\Entity\Car;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 
 class CarType extends AbstractType
 {
@@ -14,7 +15,9 @@ class CarType extends AbstractType
         $builder
             ->add('namecar')
             ->add('price')
-        ;
+            ->add('imageFile', FileType::class, [
+                'required' => false,
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void
