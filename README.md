@@ -7,3 +7,5 @@
 -- composer require vich/uploader-bundle
 
 -- php bin/console make:migration
+
+-- composer require symfony/security-bundle
