@@ -5,6 +5,7 @@
     {{ form_start(form) }}
     {{ form_row(form.namecar) }}
     {{ form_row(form.price) }}
+    {{ form_row(form.imageFile) }}
     <button type="submit">Update car</button>
     {{ form_end(form) }}
     <a href="{{ path('car_list') }}">Back to Car List</a>

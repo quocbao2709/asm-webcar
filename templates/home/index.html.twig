@@ -18,6 +18,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">{{ car.namecar }}</h5>
                                 <p class="card-text"><strong>Giá: {{ car.price }}$</strong></p>
+                                <img src="{{ asset('uploads/image/' ~ car.image) }}" alt="{{ car.namecar }} Image">
                                 <a href="{{ path('view_car', {'id': car.id}) }}">Xem chi tiết</a>
                             </div>
                         </div>
