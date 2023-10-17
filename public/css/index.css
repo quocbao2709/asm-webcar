@@ -124,3 +124,68 @@
 .menu a:hover {
     text-decoration: underline; /* Gạch chân khi di chuột qua */
 }
+
+
+/* product */
+/* Style the product-details container */
+.product-details {
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the heading */
+.product-details h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Style the product-item */
+.product-item {
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: calc(25% - 20px); /* 25% chiều rộng của sản phẩm và trừ khoảng cách */
+}
+
+/* Style the product image */
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+/* Style the price */
+.price {
+    font-weight: bold;
+    color: #f57224;
+}
+
+/* Style the Add Order link */
+.add-to-order {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Hover effect for Add Order link */
+.add-to-order:hover {
+    background-color: #0056b3;
+}
