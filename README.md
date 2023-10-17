@@ -1,6 +1,6 @@
 -- Composer Install
 
--- php bin/console doctrine:migrations:migrate
+-- php bin/console doctrine:database:create
 
 -- composer require symfony/monolog-bundle
 
