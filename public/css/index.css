@@ -189,3 +189,118 @@
 .add-to-order:hover {
     background-color: #0056b3;
 }
+
+/*HOME*/
+/* Thiết lập grid container */
+.row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Mỗi hàng chia thành 4 cột bằng nhau */
+    grid-gap: 20px; /* Khoảng cách giữa các sản phẩm */
+}
+
+/* Thiết kế dành cho card sản phẩm */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}
+
+/* Thiết lập hiệu ứng hover cho các card sản phẩm */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Thiết lập chiều rộng tối đa của hình ảnh sản phẩm */
+.card img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+    margin: 0 auto;
+}
+
+/* Hiệu ứng khi di chuột qua hình ảnh sản phẩm */
+.card:hover img {
+    transform: scale(1.1);
+}
+
+/* Thiết kế dành cho tên sản phẩm */
+.card-title {
+    font-size: 20px;
+    color: #333;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Thiết kế dành cho giá sản phẩm */
+.card-text strong {
+    font-size: 18px;
+    color: #f00;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Thiết lập chi tiết sản phẩm ở góc trên bên phải */
+.card-details {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f00;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+/*EDIT*/
+/* Thiết kế bảng danh sách xe hơi */
+.car-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Thiết kế dòng xe hơi */
+.car-row {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Thiết kế hình ảnh xe hơi */
+.car-image-cell {
+    width: 25%;
+}
+
+.car-image {
+    max-width: 100%;
+    height: auto;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Thiết kế các liên kết "View," "Edit," "Delete" */
+.action-link {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px;
+    font-weight: bold;
+}
+
+/* Hiệu ứng hover cho các liên kết */
+.action-link:hover {
+    background-color: #0056b3;
+}
