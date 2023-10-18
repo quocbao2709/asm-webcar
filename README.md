@@ -9,3 +9,5 @@
 -- php bin/console make:migration
 
 -- composer require symfony/security-bundle
+
+-- composer require doctrine/doctrine-migrations-bundle
