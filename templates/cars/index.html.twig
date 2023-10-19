@@ -20,7 +20,9 @@
                 <td>{{ car.namecar }}</td>
                 <td>{{ car.price }}</td>
                 <td class="car-image-cell">
-                    <img src="{{ asset('uploads/image/' ~ car.image) }}" alt="{{ car.namecar }} Image">
+                    <img 
+                        class="car-image"
+                    src="{{ asset('uploads/image/' ~ car.image) }}" alt="{{ car.namecar }} Image">
                     </td>
                 {# <td>{{ car.image}}</td> #}
                 <td class="car-actions">
