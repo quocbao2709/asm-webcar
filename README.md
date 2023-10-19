@@ -11,3 +11,5 @@
 -- composer require symfony/security-bundle
 
 -- composer require doctrine/doctrine-migrations-bundle
+
+-- php bin/console doctrine:migrations:migrate cập nhập database
